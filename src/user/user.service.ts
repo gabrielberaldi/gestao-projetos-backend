@@ -17,8 +17,8 @@ export class UserService {
   ) {}
 
   create(createUserDto: CreateUserDto) {
-    const user = this.userRepo.create(createUserDto);
-    this.entityManager.persistAndFlush(user);
+    // const user = this.userRepo.create(createUserDto);
+    // this.entityManager.persistAndFlush(user);
   }
 
   findAll() {

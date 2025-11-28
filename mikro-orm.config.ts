@@ -1,4 +1,4 @@
-import { defineConfig } from "@mikro-orm/core";
+import { defineConfig, UnderscoreNamingStrategy } from "@mikro-orm/core";
 import { PostgreSqlDriver } from "@mikro-orm/postgresql";
 
 export default defineConfig({
@@ -16,6 +16,8 @@ export default defineConfig({
     path: 'dist/migrations',
     pathTs: 'src/migrations',
   },
+
+  namingStrategy: UnderscoreNamingStrategy,
 
   // metadataProvider: TsMorphMetadataProvider
 })
