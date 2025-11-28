@@ -4,14 +4,16 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { InjectRepository } from '@mikro-orm/nestjs';
 import { EntityManager, EntityRepository } from '@mikro-orm/postgresql';
 import { User } from './entities/user.entity';
+import { ApiTags } from '@nestjs/swagger';
 
 @Injectable()
+@ApiTags('Users')
 export class UserService {
 
   constructor(
     @InjectRepository(User)
-    private readonly entityManager: EntityManager,
     private readonly userRepo: EntityRepository<User>,
+    private readonly entityManager: EntityManager,
   ) {}
 
   create(createUserDto: CreateUserDto) {
