@@ -3,10 +3,10 @@ import { PostgreSqlDriver } from "@mikro-orm/postgresql";
 
 export default defineConfig({
   host: 'localhost',
-  port: 5432,
-  user: 'admin',
-  password: '123',
-  dbName: 'project_management',
+  port: 5433,
+  user: 'postgres',
+  password: 'postgres',
+  dbName: 'gestao_projetos_db',
   driver: PostgreSqlDriver,
 
   entities: ['dist/**/*.entity.js'],
